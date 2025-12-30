@@ -42,7 +42,7 @@ int Fact(int n){
 	return factorial;
 }
 
-int fibo(int n){
+void fibo(int n){
 	int a = 0, b = 1, c, i;
 	printf("The fibonacci series upto %d index is: ", n);
 	printf("%d, %d, ", a, b);
@@ -54,9 +54,9 @@ int fibo(int n){
 	}
 }
 
-int Linear_search(int array[], int element){
+int Linear_search(int array[], int element, int size){
     bool key_found = false;
-    for(int i = 0; i < sizeof(array); i++ ){
+    for(int i = 0; i < size; i++ ){
         if(array[i] == element){
             key_found = true;
             printf("Element found at index %d", i);
@@ -118,7 +118,7 @@ int main(){
                 printf("What is the element to be searched?\n");
                 scanf("%d", &a);
                 
-                Linear_search(array, a);
+                Linear_search(array, a, n);
                 break;
 
             default:
@@ -126,9 +126,8 @@ int main(){
         }
 
         printf("\nDo you want to continue?(y/n)");
-        scanf("%d", &proceed);
+        scanf(" %c", &proceed);
     }while (proceed == 'y');
 }
-
 
 
