@@ -70,14 +70,14 @@ int main(){
     int a , b, r, n, i, option;
     char proceed = 'y';
     array[SIZE];
-    printf("***** Iterative Algorithms *****");
+    printf("\n***** Iterative Algorithms *****");
 
     do{
         printf("\n\n1. Calculate GCD\n");
         printf("2. Calculate Factorial\n");
-        printf("3. Calculate Nth fibonacci number\n");
+        printf("3. Calculate Fibonacci series\n");
         printf("4. Perform linear searching\n");
-        printf("Choose any one operation from above:\n");
+        printf("Choose any one operation from above:\t");
         scanf("%d", &option);
 
         switch(option){
@@ -115,7 +115,7 @@ int main(){
                     scanf("%d", &array[i]);
                 } 
 
-                printf("What is the element to be searched?\n");
+                printf("What is the element to be searched?\t");
                 scanf("%d", &a);
                 
                 Linear_search(array, a, n);
